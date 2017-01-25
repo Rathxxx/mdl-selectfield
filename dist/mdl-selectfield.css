@@ -235,7 +235,7 @@
     color: rgba(0,0,0, 0.26); }
   .mdl-selectfield--floating-label.is-focused .mdl-selectfield__label,
   .mdl-selectfield--floating-label.is-dirty .mdl-selectfield__label {
-    color: rgb(63,81,181);
+    color: inherit;
     font-size: 12px;
     top: 4px;
     visibility: visible; }
@@ -259,6 +259,9 @@
     width: 100%; }
   .mdl-selectfield.is-invalid .mdl-selectfield__label:after {
     background-color: rgb(222, 50, 38); }
+
+.mdl-selectfield--floating-label.is-focused > .mdl-selectfield__select:focus + .mdl-selectfield__icon + .mdl-selectfield__label {
+  color: rgb(63,81,181); }
 
 .mdl-selectfield__error {
   color: rgb(222, 50, 38);

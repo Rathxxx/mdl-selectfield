@@ -104,7 +104,7 @@ $selectfield-error-color: unquote("rgb(222, 50, 38)") !default;
 
   .mdl-selectfield--floating-label.is-focused &,
   .mdl-selectfield--floating-label.is-dirty & {
-    color: $selectfield-highlight-color;
+    color: inherit;
     font-size : $selectfield-floating-label-fontsize;
     top: $selectfield-vertical-spacing - ($selectfield-floating-label-fontsize + $selectfield-padding);
     visibility: visible;
@@ -137,6 +137,11 @@ $selectfield-error-color: unquote("rgb(222, 50, 38)") !default;
   .mdl-selectfield.is-invalid &:after {
     background-color: $selectfield-error-color;
   }
+}
+
+// Fix for field labels retaining their color after losing focus
+.mdl-selectfield--floating-label.is-focused > .mdl-selectfield__select:focus + .mdl-selectfield__icon + .mdl-selectfield__label {
+  color: $selectfield-highlight-color;    
 }
 
 // SelectField Error.
